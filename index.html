@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk - The Struggle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash">
+        <div class="brand-container">
+            <img src="public/brand.png" alt="Brand" class="brand-symbol">
+            <div class="blood-drip drip-1"></div>
+            <div class="blood-drip drip-2"></div>
+            <div class="blood-drip drip-3"></div>
+        </div>
+        <h1 class="splash-title font-display">GUTS</h1>
+        <p class="splash-subtitle">THE BLACK SWORDSMAN</p>
+    </div>
+
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Scroll Progress -->
+    <div class="progress" id="progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#">
+            <img src="public/brand.png" alt="Brand" class="nav-brand">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li class="mobile-brand"><img src="public/brand.png" alt="Brand"></li>
+            <li><a href="#home" class="nav-link">HOME</a></li>
+            <li><a href="#chronicles" class="nav-link">CHRONICLES</a></li>
+            <li><a href="#about" class="nav-link">ABOUT</a></li>
+            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title font-display">
+                    THE BLACK<br>SWORDSMAN
+                    <span>A TALE OF BLOOD AND IRON</span>
+                </h1>
+                <p class="hero-quote">"He who fights monsters should see to it that he himself does not become a monster. But Guts fights not to become a monster, but to remain human in a world ruled by demons."</p>
+            </div>
+        </section>
+
+        <!-- Chronicles -->
+        <section class="section chronicles" id="chronicles">
+            <div class="section-bg"></div>
+            <div class="section-overlay"></div>
+            <div class="section-inner">
+                <header class="section-header">
+                    <h2 class="section-title font-display">CHRONICLES</h2>
+                </header>
+
+                <div class="chronicle-list">
+                    <article class="chronicle-item">
+                        <time class="chronicle-date">JAN 15 2024</time>
+                        <h3 class="chronicle-title font-display">The Dragonslayer</h3>
+                        <p class="chronicle-excerpt">Forged for slaying dragons, this massive hunk of iron becomes Guts' primary tool for survival, heavy with the weight of the lives it has taken and the demons it has slain.</p>
+                    </article>
+
+                    <article class="chronicle-item">
+                        <time class="chronicle-date">JAN 08 2024</time>
+                        <h3 class="chronicle-title font-display">Brand of Sacrifice</h3>
+                        <p class="chronicle-excerpt">Given to him during the Eclipse, the Brand bleeds when malevolent spirits are near, condemning him to be hunted by demons in the physical and astral realms alike.</p>
+                    </article>
+
+                    <article class="chronicle-item">
+                        <time class="chronicle-date">JAN 02 2024</time>
+                        <h3 class="chronicle-title font-display">The Berserker Armor</h3>
+                        <p class="chronicle-excerpt">A cursed dwarven artifact that unleashes Guts' primal rage. It nullifies pain and shatters his physical limits, threatening to consume his very soul to exact vengeance.</p>
+                    </article>
+
+                    <article class="chronicle-item">
+                        <time class="chronicle-date">DEC 25 2023</time>
+                        <h3 class="chronicle-title font-display">The Hundred-Man Slayer</h3>
+                        <p class="chronicle-excerpt">During the Golden Age, Guts proved his unparalleled strength by defeating a hundred men alone, cementing his legend across midland.</p>
+                    </article>
+
+                    <article class="chronicle-item">
+                        <time class="chronicle-date">DEC 18 2023</time>
+                        <h3 class="chronicle-title font-display">The Struggle Continues</h3>
+                        <p class="chronicle-excerpt">Despite the overwhelming despair of his fate, Guts refuses to surrender. His journey is a testament to human resilience and the eternal fight against an uncaring destiny.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="about">
+            <div class="section-bg"></div>
+            <div class="section-overlay"></div>
+            <div class="section-inner">
+                <header class="section-header">
+                    <h2 class="section-title font-display">ABOUT</h2>
+                </header>
+
+                <div class="about-content">
+                    <p>Guts, the Black Swordsman, represents the unbreakable human will. Born from a hanging corpse and raised in the bloody mud of battlefields, he has known nothing but war.</p>
+                    <p>His path is one of immense suffering and profound resilience. Driven by vengeance yet accompanied by newfound allies, Guts walks the line between man and monster, battling God Hands, Apostles, and the darkness within his own heart.</p>
+                    
+                    <div class="brand-divider">
+                        <img src="public/brand.png" alt="Brand">
+                    </div>
+
+                    <p class="about-quote">"I rather fight for my life than live it." - The essence of the Black Swordsman.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="section-inner">
+                <header class="section-header">
+                    <h2 class="section-title font-display">CONTACT</h2>
+                </header>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="email" class="input" placeholder="Email" required>
+                    <button type="submit" class="submit-btn font-display">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+        <img src="public/brand.png" alt="Brand" class="footer-brand">
+        
+        <div class="social-links">
+            <!-- Telegram -->
+            <a href="https://t.me/islamakhachev" class="social-icon" aria-label="Telegram (@islamakhachev)" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.21-1.12-.33-1.08-.7.02-.19.27-.39.75-.6 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="https://x.com/gucluyumhe" class="social-icon" aria-label="Twitter/X (@gucluyumhe)" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com/00mer04" class="social-icon" aria-label="Instagram (@00mer04)" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.095C.014 8.351 0 8.759 0 12c0 3.24.014 3.65.072 4.947.2 4.358 1.76 6.78 6.095 6.98C7.351 23.986 7.759 24 12 24c3.24 0 3.65-.014 4.947-.072 4.358-.2 6.78-1.76 6.98-6.095.058-1.296.072-1.707.072-4.947 0-3.24-.014-3.65-.072-4.947-.2-4.358-1.76-6.78-6.095-6.98C15.65.014 15.24 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+        </div>
+
+        <p class="footer-text">2026 BERSERK CHRONICLES</p>
+    </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
