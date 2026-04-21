@@ -139,15 +139,16 @@
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <!-- Web3Forms Access Key buraya gelecek -->
                     <input type="hidden" name="access_key" value="e3167635-0409-4fd1-8c41-a21d0b0d9051">
-                    <input type="hidden" name="subject" value="Berserk Sitesinden Yeni İletişim Formu / Abonelik">
                     <input type="hidden" name="from_name" value="Berserk Web Platformu">
                     
-                    <input type="email" name="email" class="input" placeholder="Email" required>
+                    <input type="email" name="email" class="input" placeholder="Email" required style="margin-bottom: 20px;">
+                    <input type="text" name="subject" class="input" placeholder="Subject / Konu" required style="margin-bottom: 20px;">
+                    <textarea name="message" class="input" placeholder="Message / Mesajınız" required style="min-height: 100px; resize: vertical; margin-bottom: 20px;"></textarea>
                     
                     <!-- Botları engellemek için -->
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
-                    <button type="submit" class="submit-btn font-display">SUBSCRIBE</button>
+                    <button type="submit" class="submit-btn font-display">SEND MESSAGE</button>
                     <p id="form-result" style="color:red; margin-top:10px; font-family: 'Cinzel', serif;"></p>
                 </form>
             </div>
