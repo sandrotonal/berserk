@@ -327,7 +327,7 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('../public/berserk-guts-black-3840x2160-13632.jpg');
+            background-image: url('../assets/berserk-guts-black-3840x2160-13632.jpg');
             background-size: cover;
             background-position: center;
             filter: brightness(0.6) saturate(0.85);
@@ -447,7 +447,7 @@
             /* Container style */
         }
         .chronicles .section-bg {
-            background-image: url('../public/guts-berserk-dark-3840x2160-19127.jpg');
+            background-image: url('../assets/guts-berserk-dark-3840x2160-19127.jpg');
         }
 
         .chronicle-list {
@@ -547,7 +547,7 @@
             /* Container style */
         }
         .about .section-bg {
-            background-image: url('../public/berserk-cover.jpg');
+            background-image: url('../assets/berserk-cover.jpg');
         }
 
         .about-content {
