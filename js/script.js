@@ -155,29 +155,29 @@
                     modalContent.classList.remove('scale-75');
                     modalContent.classList.add('scale-100');
 
-                    // 4 saniye sonra Modal'i kapat
+                    // Close Modal after 3 seconds
                     setTimeout(() => {
                         modal.classList.remove('opacity-100');
                         modal.classList.add('opacity-0', 'pointer-events-none');
                         modalContent.classList.remove('scale-100');
                         modalContent.classList.add('scale-75');
-                    }, 4000);
+                    }, 3000);
 
                 } else {
                     console.log(response);
-                    resultParagraph.textContent = result.message;
+                    resultParagraph.textContent = result.message || "An error occurred.";
                     btn.textContent = originalText;
                 }
             } catch (error) {
                 console.log(error);
-                resultParagraph.textContent = "Bağlantı koptu. Guts bile buna engel olamadı.";
+                resultParagraph.textContent = "Connection lost. Please try again.";
                 btn.textContent = originalText;
             } finally {
                 btn.disabled = false;
                 setTimeout(() => {
-                    btn.textContent = 'SUBSCRIBE';
+                    btn.textContent = 'SEND MESSAGE';
                     resultParagraph.textContent = '';
-                }, 5000);
+                }, 4000);
             }
         }
 

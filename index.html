@@ -137,15 +137,15 @@
                 </header>
 
                 <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Web3Forms Access Key buraya gelecek -->
+                    <!-- Web3Forms Access Key -->
                     <input type="hidden" name="access_key" value="e3167635-0409-4fd1-8c41-a21d0b0d9051">
-                    <input type="hidden" name="from_name" value="Berserk Web Platformu">
+                    <input type="hidden" name="from_name" value="Berserk Web Platform">
                     
                     <input type="email" name="email" class="input" placeholder="Email" required style="margin-bottom: 20px;">
-                    <input type="text" name="subject" class="input" placeholder="Subject / Konu" required style="margin-bottom: 20px;">
-                    <textarea name="message" class="input" placeholder="Message / Mesajınız" required style="min-height: 100px; resize: vertical; margin-bottom: 20px;"></textarea>
+                    <input type="text" name="subject" class="input" placeholder="Subject" required style="margin-bottom: 20px;">
+                    <textarea name="message" class="input" placeholder="Message" required style="min-height: 100px; resize: vertical; margin-bottom: 20px;"></textarea>
                     
-                    <!-- Botları engellemek için -->
+                    <!-- Anti-bot -->
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
                     <button type="submit" class="submit-btn font-display">SEND MESSAGE</button>
@@ -179,12 +179,11 @@
 
     <script src="js/script.js"></script>
 
-    <!-- Animasyonlu Başarı Bildirimi (Modal) -->
-    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-md">
+    <!-- Success Notification Modal -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-sm">
         <div id="success-modal-content" class="text-center transform scale-75 transition-transform duration-500 delay-100 flex flex-col items-center">
-            <img src="assets/brand.png" alt="Brand of Sacrifice" class="w-32 h-32 mb-6 animate-pulse" style="filter: drop-shadow(0 0 25px rgba(220, 38, 38, 0.9));">
-            <h3 class="font-display text-4xl text-red-600 mb-3 tracking-widest uppercase">Pact Sealed</h3>
-            <p class="font-serif text-gray-300 italic text-lg">"Your soul is now bound to the struggle."</p>
+            <img src="assets/brand.png" alt="Brand of Sacrifice" class="w-16 h-16 xl:w-24 xl:h-24 mb-4" style="filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.7));">
+            <h3 class="font-display text-2xl xl:text-3xl text-gray-200 tracking-widest uppercase">Message Sent</h3>
         </div>
     </div>
 </body>
