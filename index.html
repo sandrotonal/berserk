@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berserk - The Struggle</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="public/brand.png">
+    <link rel="stylesheet" href="css/tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -135,9 +136,19 @@
                     <h2 class="section-title font-display">CONTACT</h2>
                 </header>
 
-                <form class="contact-form" id="contactForm">
-                    <input type="email" class="input" placeholder="Email" required>
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key buraya gelecek -->
+                    <input type="hidden" name="access_key" value="e3167635-0409-4fd1-8c41-a21d0b0d9051">
+                    <input type="hidden" name="subject" value="Berserk Sitesinden Yeni İletişim Formu / Abonelik">
+                    <input type="hidden" name="from_name" value="Berserk Web Platformu">
+                    
+                    <input type="email" name="email" class="input" placeholder="Email" required>
+                    
+                    <!-- Botları engellemek için -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
                     <button type="submit" class="submit-btn font-display">SUBSCRIBE</button>
+                    <p id="form-result" style="color:red; margin-top:10px; font-family: 'Cinzel', serif;"></p>
                 </form>
             </div>
         </section>
@@ -166,5 +177,14 @@
     </main>
 
     <script src="js/script.js"></script>
+
+    <!-- Animasyonlu Başarı Bildirimi (Modal) -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-md">
+        <div id="success-modal-content" class="text-center transform scale-75 transition-transform duration-500 delay-100 flex flex-col items-center">
+            <img src="public/brand.png" alt="Brand of Sacrifice" class="w-32 h-32 mb-6 animate-pulse" style="filter: drop-shadow(0 0 25px rgba(220, 38, 38, 0.9));">
+            <h3 class="font-display text-4xl text-red-600 mb-3 tracking-widest uppercase">Pact Sealed</h3>
+            <p class="font-serif text-gray-300 italic text-lg">"Your soul is now bound to the struggle."</p>
+        </div>
+    </div>
 </body>
 </html>

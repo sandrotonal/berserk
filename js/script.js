@@ -117,14 +117,68 @@
         }
 
         // Form
-        function handleSubmit(e) {
+        async function handleSubmit(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
-            btn.textContent = 'SENT';
-            setTimeout(() => {
-                btn.textContent = 'SUBSCRIBE';
-                e.target.reset();
-            }, 2000);
+            const resultParagraph = document.getElementById('form-result');
+            const modal = document.getElementById('success-modal');
+            const modalContent = document.getElementById('success-modal-content');
+            
+            const originalText = btn.textContent;
+            btn.textContent = 'SENDING...';
+            btn.disabled = true;
+            resultParagraph.textContent = '';
+
+            const formData = new FormData(e.target);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+                
+                const result = await response.json();
+                
+                if (response.status == 200) {
+                    btn.textContent = 'SENT';
+                    e.target.reset();
+
+                    // Animasyonlu Modal'i Göster
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modal.classList.add('opacity-100');
+                    modalContent.classList.remove('scale-75');
+                    modalContent.classList.add('scale-100');
+
+                    // 4 saniye sonra Modal'i kapat
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-100');
+                        modal.classList.add('opacity-0', 'pointer-events-none');
+                        modalContent.classList.remove('scale-100');
+                        modalContent.classList.add('scale-75');
+                    }, 4000);
+
+                } else {
+                    console.log(response);
+                    resultParagraph.textContent = result.message;
+                    btn.textContent = originalText;
+                }
+            } catch (error) {
+                console.log(error);
+                resultParagraph.textContent = "Bağlantı koptu. Guts bile buna engel olamadı.";
+                btn.textContent = originalText;
+            } finally {
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.textContent = 'SUBSCRIBE';
+                    resultParagraph.textContent = '';
+                }, 5000);
+            }
         }
 
         // Init
